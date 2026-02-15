@@ -1,0 +1,66 @@
+.nav {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(248, 249, 250, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--border);
+  z-index: 100;
+  animation: slideDown 0.5s ease-out;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-fire {
+  font-size: 1.8rem;
+  animation: flicker 3s infinite;
+}
+
+.nav-cta {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 51, 102, 0.2);
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 51, 102, 0.35);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .nav-cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

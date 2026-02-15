@@ -1,0 +1,251 @@
+.output-panel {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 2px solid var(--border);
+  height: fit-content;
+  animation: slideIn 0.5s ease-out 0.2s both;
+}
+
+.output-panel.sticky {
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #999;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.empty-state p {
+  color: #999;
+  line-height: 1.6;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 51, 102, 0.1);
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+.loading p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.loading-subtext {
+  font-size: 0.9rem !important;
+  color: #999 !important;
+  font-weight: 400 !important;
+}
+
+.email-output {
+  animation: slideIn 0.5s ease-out;
+}
+
+.output-subject {
+  background: linear-gradient(135deg, #F0F1F5 0%, #E8E9ED 100%);
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+}
+
+.output-subject-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.output-subject-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary);
+  line-height: 1.4;
+}
+
+.output-body {
+  background: #F8F9FA;
+  padding: 1.5rem;
+  border-radius: 10px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  border: 1px solid #E8E9ED;
+}
+
+.output-insights {
+  background: linear-gradient(135deg, rgba(0, 255, 170, 0.05) 0%, rgba(0, 255, 170, 0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 255, 170, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.output-insights h4 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.output-insights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.output-insights li {
+  padding: 0.5rem 0;
+  color: var(--secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.5;
+}
+
+.output-insights li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.output-metadata {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metadata-item {
+  background: #F0F1F5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Syne', sans-serif;
+}
+
+.btn-copy {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn-copy:hover {
+  background: #14193d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 14, 39, 0.3);
+}
+
+.btn-regenerate {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-regenerate:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 51, 102, 0.3);
+}
+
+/* Scrollbar styling */
+.output-panel.sticky::-webkit-scrollbar {
+  width: 8px;
+}
+
+.output-panel.sticky::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.output-panel.sticky::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.output-panel.sticky::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .output-panel.sticky {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .output-panel {
+    padding: 1.5rem;
+  }
+
+  .panel-title {
+    font-size: 1.6rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
