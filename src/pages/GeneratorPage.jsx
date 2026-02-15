@@ -41,7 +41,7 @@ function GeneratorPage() {
     setError(null);
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/generate`, formData);
+      const response = await axios.post(`/api/generate`, formData);
       setOutput(response.data);
     } catch (err) {
       console.error('Error generating email:', err);
