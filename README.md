@@ -32,7 +32,6 @@ Enter structured details → Get a ready-to-send personalized email.
 ## 🛠 Tech Stack
 
 - React
-
 - Node.js + Express  
 - bcrypt  
 - Groq SDK (LLM integration)
