@@ -31,7 +31,8 @@ Enter structured details → Get a ready-to-send personalized email.
 
 ## 🛠 Tech Stack
 
-- React  
+- React
+
 - Node.js + Express  
 - bcrypt  
 - Groq SDK (LLM integration)
@@ -40,29 +41,29 @@ Enter structured details → Get a ready-to-send personalized email.
 
 ## 📈 Future Improvements
 
--Email copy-to-clipboard enhancement
--Saved drafts
--LinkedIn outreach mode
--Performance analytics
--Template memory system
+- Email copy-to-clipboard enhancement
+- Saved drafts
+- LinkedIn outreach mode
+- Performance analytics
+- Template memory system
 
 ---
 
 ## 🤝 Contributing
 Contributions are welcome.
 If you’d like to:
--Improve prompt engineering
--Optimize UI/UX
--Add new features
+- Improve prompt engineering
+- Optimize UI/UX
+- Add new features
 
 ---
 
 ## ⭐ Support
 
 If you found this project useful:
--Star the repo ⭐
--Share feedback
--Suggest improvements
+- Star the repo ⭐
+- Share feedback
+- Suggest improvements
 
 ---
  
