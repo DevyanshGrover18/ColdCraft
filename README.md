@@ -38,7 +38,7 @@ Enter structured details → Get a ready-to-send personalized email.
 
 ---
 
-##📈 Future Improvements
+## 📈 Future Improvements
 
 -Email copy-to-clipboard enhancement
 -Saved drafts
@@ -48,7 +48,7 @@ Enter structured details → Get a ready-to-send personalized email.
 
 ---
 
-##🤝 Contributing
+## 🤝 Contributing
 Contributions are welcome.
 If you’d like to:
 -Improve prompt engineering
@@ -57,7 +57,7 @@ If you’d like to:
 
 ---
 
-##⭐ Support
+## ⭐ Support
 
 If you found this project useful:
 -Star the repo ⭐
@@ -65,7 +65,7 @@ If you found this project useful:
 -Suggest improvements
 
 ---
-
-##🧑‍💻 Built With Intent
+ 
+## 🧑‍💻 Built With Intent
 ColdCraft was built to remove hesitation from outreach.
 Because opportunities don’t come — they’re created.
