@@ -1,4 +1,4 @@
-import '../styles/inputform.css'
+import "../styles/inputform.css";
 
 function InputForm({ formData, onChange, onGenerate, loading, error }) {
   const handleSubmit = (e) => {
@@ -13,23 +13,19 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
         Your Information
       </h2>
 
-      {error && (
-        <div className="error-message">
-          ⚠️ {error}
-        </div>
-      )}
+      {error && <div className="error-message">⚠️ {error}</div>}
 
       <form onSubmit={handleSubmit}>
         {/* Section A - Basic Info */}
         <div className="form-section">
           <h3 className="section-title">Basic Info</h3>
-          
+
           <div className="form-group">
             <label>Your Name *</label>
             <input
               type="text"
               value={formData.name}
-              onChange={(e) => onChange('name', e.target.value)}
+              onChange={(e) => onChange("name", e.target.value)}
               placeholder="Alex Chen"
               required
             />
@@ -40,7 +36,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
             <input
               type="text"
               value={formData.role}
-              onChange={(e) => onChange('role', e.target.value)}
+              onChange={(e) => onChange("role", e.target.value)}
               placeholder="Senior Frontend Developer"
               required
             />
@@ -52,7 +48,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
               <input
                 type="number"
                 value={formData.years}
-                onChange={(e) => onChange('years', e.target.value)}
+                onChange={(e) => onChange("years", e.target.value)}
                 placeholder="5"
                 min="0"
                 max="50"
@@ -64,7 +60,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
               <input
                 type="text"
                 value={formData.skills}
-                onChange={(e) => onChange('skills', e.target.value)}
+                onChange={(e) => onChange("skills", e.target.value)}
                 placeholder="React, TypeScript, Node.js"
               />
             </div>
@@ -81,7 +77,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
               <input
                 type="text"
                 value={formData.recruiter}
-                onChange={(e) => onChange('recruiter', e.target.value)}
+                onChange={(e) => onChange("recruiter", e.target.value)}
                 placeholder="Sarah (optional)"
               />
             </div>
@@ -91,7 +87,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
               <input
                 type="text"
                 value={formData.company}
-                onChange={(e) => onChange('company', e.target.value)}
+                onChange={(e) => onChange("company", e.target.value)}
                 placeholder="Stripe"
                 required
               />
@@ -103,7 +99,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
             <input
               type="text"
               value={formData.jobRole}
-              onChange={(e) => onChange('jobRole', e.target.value)}
+              onChange={(e) => onChange("jobRole", e.target.value)}
               placeholder="Senior React Developer"
               required
             />
@@ -113,7 +109,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
             <label>Company Description</label>
             <textarea
               value={formData.companyDescription}
-              onChange={(e) => onChange('companyDescription', e.target.value)}
+              onChange={(e) => onChange("companyDescription", e.target.value)}
               placeholder="Paste info from company website or LinkedIn... What do they do? Recent launches? Mission?"
               rows="4"
             />
@@ -123,7 +119,7 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
             <label>Job Description</label>
             <textarea
               value={formData.jobDescription}
-              onChange={(e) => onChange('jobDescription', e.target.value)}
+              onChange={(e) => onChange("jobDescription", e.target.value)}
               placeholder="Paste the job posting or key requirements..."
               rows="4"
             />
@@ -137,12 +133,12 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
           <div className="form-group">
             <label>Tone</label>
             <div className="select-group">
-              {['confident', 'concise', 'formal', 'friendly'].map(tone => (
+              {["confident", "concise", "formal", "friendly"].map((tone) => (
                 <button
                   key={tone}
                   type="button"
-                  className={`select-btn ${formData.tone === tone ? 'active' : ''}`}
-                  onClick={() => onChange('tone', tone)}
+                  className={`select-btn ${formData.tone === tone ? "active" : ""}`}
+                  onClick={() => onChange("tone", tone)}
                 >
                   {tone.charAt(0).toUpperCase() + tone.slice(1)}
                 </button>
@@ -154,15 +150,15 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
             <label>Email Length</label>
             <div className="select-group">
               {[
-                { value: 'short', label: 'Short (80-120)' },
-                { value: 'medium', label: 'Medium (120-180)' },
-                { value: 'long', label: 'Long (200-250)' }
+                { value: "short", label: "Short (80-120)" },
+                { value: "medium", label: "Medium (120-180)" },
+                { value: "long", label: "Long (200-250)" },
               ].map(({ value, label }) => (
                 <button
                   key={value}
                   type="button"
-                  className={`select-btn ${formData.length === value ? 'active' : ''}`}
-                  onClick={() => onChange('length', value)}
+                  className={`select-btn ${formData.length === value ? "active" : ""}`}
+                  onClick={() => onChange("length", value)}
                 >
                   {label}
                 </button>
@@ -174,30 +170,35 @@ function InputForm({ formData, onChange, onGenerate, loading, error }) {
             <label>Goal</label>
             <div className="select-group">
               {[
-                { value: 'interview', label: 'Interview' },
-                { value: 'referral', label: 'Referral' },
-                { value: 'coffee', label: 'Coffee Chat' },
-                { value: 'followup', label: 'Follow-up' }
+                { value: "interview", label: "Interview" },
+                { value: "referral", label: "Referral" },
+                { value: "coffee", label: "Coffee Chat" },
+                { value: "followup", label: "Follow-up" },
               ].map(({ value, label }) => (
                 <button
                   key={value}
                   type="button"
-                  className={`select-btn ${formData.goal === value ? 'active' : ''}`}
-                  onClick={() => onChange('goal', value)}
+                  className={`select-btn ${formData.goal === value ? "active" : ""}`}
+                  onClick={() => onChange("goal", value)}
                 >
                   {label}
                 </button>
               ))}
             </div>
           </div>
+          <div className="form-group custom-request">
+            <label>Custom Request</label>
+            <textarea
+              value={formData.customRequest}
+              onChange={(e) => onChange("customRequest", e.target.value)}
+              placeholder="Any special instructions? e.g. Mention my open source project, keep it under 100 words, avoid buzzwords..."
+              rows="3"
+            />
+          </div>
         </div>
 
-        <button 
-          type="submit" 
-          className="generate-btn"
-          disabled={loading}
-        >
-          {loading ? 'Generating...' : '🔥 Generate Email'}
+        <button type="submit" className="generate-btn" disabled={loading}>
+          {loading ? "Generating..." : "🔥 Generate Email"}
         </button>
       </form>
     </div>

@@ -165,3 +165,12 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.custom-request textarea {
+  border-style: dashed;
+  background: rgba(255, 51, 102, 0.02);
+}
+
+.custom-request textarea:focus {
+  border-style: solid;
+}

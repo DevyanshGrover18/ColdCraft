@@ -12,6 +12,7 @@ export function buildEmailPrompt(data) {
     tone,
     length,
     goal,
+    customRequest,
   } = data;
 
   return `Generate a professional cold email for a job application.
@@ -36,22 +37,28 @@ Goal: ${goal || "interview"}
 
 === FORMATTING REQUIREMENTS ===
 
-${length === "short" ? `
+${
+  length === "short"
+    ? `
 SHORT EMAIL FORMAT:
 - 2 paragraphs
 - No formal closing remarks needed
 - Keep it brief and direct
-` : length === "medium" ? `
+`
+    : length === "medium"
+      ? `
 MEDIUM EMAIL FORMAT:
 - 3 paragraphs total
 - End with professional closing remarks (e.g., "Best regards," "Kind regards," "Sincerely,")
 - Follow with sender's name
-` : `
+`
+      : `
 LONG EMAIL FORMAT:
 - 4 paragraphs total
 - End with professional closing remarks (e.g., "Best regards," "Kind regards," "Sincerely,")
 - Follow with sender's name
-`}
+`
+}
 
 === OUTPUT FORMAT ===
 Return ONLY valid JSON in this structure:
@@ -61,11 +68,25 @@ Return ONLY valid JSON in this structure:
   "insights": ["what made this personalized", "key points included", "why this approach"]
 }
 
-${length !== "short" ? `
+${
+  length !== "short"
+    ? `
 IMPORTANT: The body must end with:
 - Empty line (\\n\\n)
 - Closing remark ("Best regards," or similar)
 - Empty line (\\n\\n)
 - Sender's name (${name})
-` : ""}`;
+`
+    : ""
+} 
+
+${
+  customRequest
+    ? `=== SPECIAL REQUESTS ===
+${customRequest}
+(Follow these instructions carefully — they take priority over default behavior)
+
+`
+    : ""
+}`;
 }

@@ -20,6 +20,7 @@ export async function generateEmail(req, res) {
       tone,
       length,
       goal,
+      customRequest
     } = req.body;
 
     const prompt = buildEmailPrompt({
@@ -35,6 +36,7 @@ export async function generateEmail(req, res) {
       tone,
       length,
       goal,
+      customRequest
     });
 
     const completion = await groq.chat.completions.create({

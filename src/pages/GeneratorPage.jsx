@@ -17,7 +17,8 @@ function GeneratorPage() {
     jobDescription: '',
     tone: 'confident',
     length: 'short',
-    goal: 'interview'
+    goal: 'interview',
+    customRequest : ""
   });
 
   const [output, setOutput] = useState(null);
